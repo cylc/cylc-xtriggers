@@ -81,4 +81,4 @@ def xrandom(percent, secs=0, _=None, debug=False):
             'COLOR': COLORS[randint(0, len(COLORS) - 1)],  # nosec
             'SIZE': SIZES[randint(0, len(SIZES) - 1)]  # nosec
         }
-    return (satisfied, results)
+    return satisfied, results
