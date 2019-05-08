@@ -51,7 +51,7 @@ setup(
     version="0.1",
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
-    packages=["cylc.xtriggers"],
+    packages=["cylc.flow.xtriggers"],
     install_requires=install_requires,
     tests_require=tests_require,
     extras_require=extra_requires,
