@@ -27,20 +27,20 @@
         an = cylc_kafka_consumer( \
                  kafka_server={{KAFKA_SERVER}}, kafka_topic={{KAFKA_TOPIC}}, \
                  message=system:{{SYSTEM}} point:%(point)s data:<.*analysis.*>, \
-            group_id=an{{GROUP_ID_PREFIX}}(id)s):PT10S
+                 group_id=an{{GROUP_ID_PREFIX}}(id)s):PT10S
         # Trigger off of availability of "forecast" files:
         # Don't quote the function arguments here.
         fc = cylc_kafka_consumer( \
-            kafka_server={{KAFKA_SERVER}}, kafka_topic={{KAFKA_TOPIC}}, \
-            message=system:{{SYSTEM}} point:%(point)s data:<.*forecast.*>, \
-            group_id=fc{{GROUP_ID_PREFIX}}%(id)s):PT10S
-   [[dependencies]]
+                 kafka_server={{KAFKA_SERVER}}, kafka_topic={{KAFKA_TOPIC}}, \
+                 message=system:{{SYSTEM}} point:%(point)s data:<.*forecast.*>, \
+                 group_id=fc{{GROUP_ID_PREFIX}}%(id)s):PT10S
+    [[dependencies]]
         [[[P1Y]]]
-           graph = """@an => proc_an
-                      @fc => proc_fc
-                      pre => proc_an & proc_fc => publish
-                      # Make sure products are published in correct order:
-                      publish[-P1Y] => publish"""
+            graph = """@an => proc_an
+                       @fc => proc_fc
+                       pre => proc_an & proc_fc => publish
+                       # Make sure products are published in correct order:
+                       publish[-P1Y] => publish"""
 [runtime]
     [[pre]]
         #...
