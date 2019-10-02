@@ -40,7 +40,8 @@ tests_require = [
     'pytest-cov==2.6.*',
     'pytest==4.4.*',
     'pycodestyle==2.5.*',
-    'testfixtures==6.6.*'
+    'testfixtures==6.6.*',
+    'kafka-python'
 ]
 
 extra_requires = {
