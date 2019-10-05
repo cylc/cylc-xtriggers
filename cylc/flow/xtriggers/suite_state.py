@@ -22,9 +22,9 @@
 import os
 import sqlite3
 
-from cylc.cfgspec.glbl_cfg import glbl_cfg
-from cylc.cycling.util import add_offset
-from cylc.dbstatecheck import CylcSuiteDBChecker
+from cylc.flow.cfgspec.glbl_cfg import glbl_cfg
+from cylc.flow.cycling.util import add_offset
+from cylc.flow.dbstatecheck import CylcSuiteDBChecker
 from isodatetime.parsers import TimePointParser
 
 
