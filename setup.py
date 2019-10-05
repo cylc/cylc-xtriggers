@@ -32,7 +32,7 @@ def read(*parts):
 
 install_requires = [
     'isodatetime==1!2.0.*',
-    'cylc-flow==8.0a0'
+    'cylc-flow>=8.0a1'
 ]
 tests_require = [
     'codecov==2.0.*',
