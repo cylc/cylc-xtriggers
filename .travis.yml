@@ -10,5 +10,5 @@ install:
 - pip install .[all]
 
 script:
-- pytest
 - pycodestyle --exclude kafka
+- pytest
