@@ -1,0 +1,14 @@
+---
+cache: pip
+language: python
+
+python:
+  - "3.7"
+  - "3.7-dev"  # 3.7 development branch
+
+install:
+- pip install .[all]
+
+script:
+- pycodestyle --exclude kafka
+- pytest

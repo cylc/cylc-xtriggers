@@ -35,6 +35,7 @@ below.
  - Matt Shin
  - Sadie Bartholomew
  - Bruno Kinoshita
+ - Ytturi
  - Samuel Gaist
 
 (All contributors are identifiable with email addresses in the git version
